@@ -1,11 +1,13 @@
 import './style.css';
-import Modal from './lib/Modal';
+import Modal from './Modal.js';
 import { useState } from 'react';
 
-const App = () => {
+export default function App() {
   const [modalIsOpen, setModalIsOpen] = useState(false);
 
-  const toggleModal = () => setModalIsOpen(!modalIsOpen);
+  function toggleModal () {
+    setModalIsOpen(!modalIsOpen);
+  }
 
   return (
     <div className="App">
@@ -17,5 +19,3 @@ const App = () => {
     </div>
   );
 }
-
-export default App;

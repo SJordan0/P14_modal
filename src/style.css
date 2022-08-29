@@ -5,6 +5,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+code {
+  font-family: sans-serif;
+}
+
 .App {
   text-align: center;
 }

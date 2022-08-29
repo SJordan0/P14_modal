@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import checkMark from './check-mark.svg';
 
 const ModalBackground = styled.div`
     position: fixed;
@@ -41,9 +40,10 @@ const CloseButton = styled.button`
     background-color: #32D7F0;
     padding:auto;
     border: 0;
-
-    img {
-        max-width: 40px;
+    
+    p { 
+        font-size: 26px;
+        margin: 0;
     }
 `
 
@@ -53,18 +53,15 @@ const ModalMessage = styled.span`
     margin-right: 20px;
 `
 
-const Modal = (props) => {
+export default function Modal(props) {
    return (
         <ModalBackground isOpen={props.isOpen} onClick={props.onClickOutside ? props.onClickOutside : props.onConfirm}>
             <ModalContainer onClick={(e) => e.stopPropagation()}>
                     <CloseButton onClick={props.onConfirm}>
-                        <img src={checkMark} alt="check-mark" />
+                        <p>X</p>
                     </CloseButton>
                     <ModalMessage> {props.message ? props.message : "Whatever you did, it is confirmed"} </ModalMessage>
             </ModalContainer>           
        </ModalBackground>
    )
 }
-
-export default Modal;
-
