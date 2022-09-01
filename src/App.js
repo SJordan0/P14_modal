@@ -1,11 +1,11 @@
+import React, { useState } from 'react';
+import Modal from './lib/components/Modal';
 import './style.css';
-import Modal from './Modal.js';
-import { useState } from 'react';
 
 export default function App() {
   const [modalIsOpen, setModalIsOpen] = useState(false);
 
-  function toggleModal () {
+  const toggleModal = () => {
     setModalIsOpen(!modalIsOpen);
   }
 
