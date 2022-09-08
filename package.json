@@ -1,25 +1,28 @@
 {
-  "name": "sjordan0-p14-modal",
-  "version": "0.2.1",
+  "name": "sjordan0-p14",
+  "version": "0.1.0",
+  "private": false,
+  "license": "MIT",
   "main": "dist/index.js",
   "module": "dist/index.js",
-  "dependencies": {
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "devDependencies": {
     "@babel/cli": "^7.16.0",
     "@babel/core": "^7.16.5",
     "@babel/polyfill": "^7.12.1",
     "@babel/preset-env": "^7.16.5",
-    "@testing-library/jest-dom": "^5.16.5",
-    "@testing-library/react": "^13.3.0",
-    "@testing-library/user-event": "^13.5.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-scripts": "5.0.1",
-    "styled-components": "^5.3.5",
-    "web-vitals": "^2.1.4"
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-scripts": "5.0.0",
+    "styled-components": "^5.3.3"
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "set NODE_ENV=production rimraf dist && babel src/lib --out-dir dist --copy-files",
+    "build-lib": "set NODE_ENV=production rimraf dist && babel src/lib --out-dir dist --copy-files",
+    "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -41,7 +44,7 @@
       "last 1 safari version"
     ]
   },
-  "devDependencies": {
-    "babel-cli": "^6.26.0"
+  "dependencies": {
+    "react-router-dom": "^6.2.1"
   }
 }
