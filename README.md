@@ -8,18 +8,18 @@ Simple component for React project.
 
 You can install this component with npm or yarn:
 
-    npm i sjordan0-p14-modal
+    npm i sjordan0-p14
 
 or
 
-    yarn add sjordan0-p14-modal
+    yarn add sjordan0-p14
 
 
 ## Use in your React project
 
 Import the Modal component into the file
 
-    import { Modal } from sjordan0-p14-modal
+    import { Modal } from sjordan0-p14
 
 # Getting Started with Create React App
 
