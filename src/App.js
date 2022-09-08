@@ -2,6 +2,8 @@ import { useState } from "react";
 import Modal from "./lib/components/Modal";
 
 function App() {
+
+  //define css for modale
   const myTheme = {
     containerBg: "grey",
     messageBg: "grey",
@@ -11,9 +13,13 @@ function App() {
     buttonHoverTxt: "black",
   };
 
+  //State of the modal
   const [modalIsOpen, setModalIsOpen] = useState(false);
+  //State for open the modal
   const onOpenModal = () => setModalIsOpen(true);
+  //State reset for closing the modal
   const onCloseModal = () => setModalIsOpen(false);
+  //Open the modal
   const handleSubmit = (e) => {
     e.preventDefault();
     onOpenModal();
@@ -23,7 +29,7 @@ function App() {
     <div className="App">
       <form onSubmit={handleSubmit}>
         <button type="submit" className="submit">
-          Clic to open Modal
+          Click to open Modal
         </button>
       </form>
 
